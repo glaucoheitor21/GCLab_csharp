@@ -2,26 +2,24 @@
 
 class Program
 {
-    // IMPORTANTE: ESTE CÓDIGO CONTÉM PROBLEMAS PROPOSITAIS.
-    // Os alunos devem implementar as correções para chegar ao final com "GC limpo".
     static void Main()
     {
         var tracker = new IssueTracker();
 
-        ExectuteWorks(tracker);
+        ExecuteWorks(tracker);
 
         // Força coletas e verifica sobreviventes
         GCHelpers.FullCollect();
         tracker.Report();
 
         Console.WriteLine(tracker.HasSurvivors
-            ? "\n❌ Existem sobreviventes indesejados. Sua missão: corrigir o código e rodar novamente."
-            : "\n✅ GC limpo: nenhuma referência indesejada permaneceu viva.");
+            ? "\n Existem sobreviventes indesejados. Sua missão: corrigir o código e rodar novamente."
+            : "\n GC limpo: nenhuma referência indesejada permaneceu viva.");
     }
 
-    static void ExectuteWorks(IssueTracker tracker)
+    static void ExecuteWorks(IssueTracker tracker)
     {
-        Console.WriteLine("=== GCLab - Versão com Problemas ===");
+        Console.WriteLine("=== GCLab - Versão Corrigida ===");
         Console.WriteLine($"GC Server Mode: {System.Runtime.GCSettings.IsServerGC}\n");
 
         
