@@ -1,3 +1,8 @@
+## Grupo
+
+- Glauco Heitor Gonçalves - RM 555978
+- Pedro Henrique Junqueira - RM 556278
+
 # Desafio — Garbage Collector no C#
 
 Este projeto foi desenvolvido como **atividade prática (Hands On)** da disciplina de C# (3ESC#).  
